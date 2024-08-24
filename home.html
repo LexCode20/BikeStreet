@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/forms/home.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo da BikeStreet">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção de Introdução -->
+        <section class="intro">
+            <h1>Bem-vindo à BikeStreet</h1>
+            <p>Encontre as melhores bicicletas para suas aventuras. Explore nosso portfólio e descubra a bicicleta perfeita para você.</p>
+            <a href="bicicletas.html" class="btn-primary">Explore Nossas Bicicletas</a>
+        </section>
+
+        <!-- Galeria de Produtos -->
+        <section class="product-gallery">
+            <h2>Nossas Bicicletas</h2>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="img/bicicletas/bicicleta.jpg" alt="Bicicleta 1">
+                    <h3>Bicicleta X1</h3>
+                    <p>Descrição breve da bicicleta X1.</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/bicicletas/bikeVintageMonoChrome.jpg" alt="Bicicleta 2">
+                    <h3>Bicicleta Y2</h3>
+                    <p>Descrição breve da bicicleta Y2.</p>
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </section>
+
+        <!-- Seção de Destaques -->
+        <section class="highlights">
+            <h2>Destaques da Semana</h2>
+            <div class="highlight-item">
+                <img src="img/highlight1.jpg" alt="Destaque 1">
+                <div class="highlight-info">
+                    <h3>Promoção Especial</h3>
+                    <p>Detalhes sobre a promoção especial desta semana.</p>
+                </div>
+            </div>
+            <!-- Adicione mais destaques conforme necessário -->
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="testimonials">
+            <h2>O que nossos clientes dizem</h2>
+            <blockquote>
+                <p>"A melhor bicicleta que já tive! Excelente qualidade e ótimo atendimento."</p>
+                <cite>— Guilherme Marques</cite>
+            </blockquote>
+            <blockquote>
+                <p>"A melhor bicicleta que já tive! Excelente qualidade e ótimo atendimento."</p>
+                <cite>— Alisson Rafael</cite>
+            </blockquote>
+            <!-- Adicione mais depoimentos conforme necessário -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BikeStreet. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function enteredBicicletas(){
+            const storedEmail = localStorage.getItem('email')
+            const storedSenha = localStorage.getItem('senha')
+        }
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const burger = document.querySelector('.burger');
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

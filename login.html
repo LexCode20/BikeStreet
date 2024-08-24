@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/forms/login.css">
 </head>
 <body>
-    <form action="">
-        <fieldset>
+    <div class="form-container">
+        <form action="" method="post" onsubmit="return false;">
             <fieldset>
                 <h3>Login</h3>
+                <label for="email">Email:
+                    <input type="text" name="email" id="email" placeholder="Seu email">
+                </label>
+                <label for="senha">Senha:
+                    <input type="password" name="senha" id="senha" placeholder="Sua senha">
+                </label>
+                <div class="form-buttons">
+                    <input type="button" value="Entrar" onclick="loginUser()">
+                    <input type="button" value="Cadastrar" onclick="window.location.href='cadastro.html'">
+                </div>
             </fieldset>
-            <label for="name">
-                <input type="text" name="name" id="" placeholder="Nome">
-            </label>
-            <label for="senha">
-                <input type="password" name="senha" id="" placeholder="Senha">
-            </label>
-            <input type="button" value="Entrar">
-            <input type="button" name="" id="" value="Cadastrar">
-        </fieldset>
-    </form>
+        </form>
+    </div>
+    <script>
+        function loginUser() {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const storedEmail = localStorage.getItem('email');
+            const storedSenha = localStorage.getItem('senha');
+
+            if (email === storedEmail && senha === storedSenha) {
+                alert('Login realizado com sucesso!');
+                window.location.href = 'home.html';
+            } else {
+                alert('Email ou senha incorretos.');
+            }
+        }
+    </script>
 </body>
 </html>

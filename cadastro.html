@@ -4,28 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="../css/formsCss">
+    <link rel="stylesheet" href="/css/forms/cadastro.css">
 </head>
 <body>
     <div class="form-container">
-        <form action="">
+        <form action="" method="post" onsubmit="return false;">
             <fieldset>
                 <h3>Cadastro</h3>
+                <label for="name">Nome:
+                    <input type="text" id="name" name="name" placeholder="Nome">
+                </label>
                 <label for="email">Email:
                     <input type="text" id="email" name="email" placeholder="Seu email">
                 </label>
-                <label for="name">Nome:
-                    <input type="text" id="name" name="name" placeholder="Nome">
+                <label for="tell">Telefone:
+                    <input type="number" id="tell" name="tell" placeholder="Telefone">
                 </label>
                 <label for="senha">Senha:
                     <input type="password" id="senha" name="senha" placeholder="Senha">
                 </label>
                 <div class="form-buttons">
-                    <input type="button" value="Cadastro">
-                    <input type="button" value="Login">
+                    <input type="button" value="Cadastrar" onclick="registerUser()">
+                    <input type="button" value="Login" onclick="window.location.href='login.html';">
                 </div>
             </fieldset>
         </form>
     </div>
+    <script>
+        function registerUser() {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const tell = document.getElementById('tell').value;
+            const nome = document.getElementById('name').value;
+
+            if (email && senha && tell && nome) {
+                localStorage.setItem('email', email);
+                localStorage.setItem('senha', senha);
+                localStorage.setItem('tell', tell);
+                localStorage.setItem('name', nome);
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'login.html';
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
 </body>
 </html>
