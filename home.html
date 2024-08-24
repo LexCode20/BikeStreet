@@ -17,7 +17,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="login.html">Login</a></li>
-                <li><a href="bicicletas.html">Bicicletas</a></li>
+                <li><a href="" id="bicicletas-link">Bicicletas</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -33,7 +33,7 @@
         <section class="intro">
             <h1>Bem-vindo à BikeStreet</h1>
             <p>Encontre as melhores bicicletas para suas aventuras. Explore nosso portfólio e descubra a bicicleta perfeita para você.</p>
-            <a href="bicicletas.html" class="btn-primary">Explore Nossas Bicicletas</a>
+            <a href="#" id="bicicletas-btn" class="btn-primary">Explore Nossas Bicicletas</a>
         </section>
 
         <!-- Galeria de Produtos -->
@@ -87,16 +87,30 @@
     </footer>
 
     <script>
-        function enteredBicicletas(){
-            const storedEmail = localStorage.getItem('email')
-            const storedSenha = localStorage.getItem('senha')
+        function checkLogin() {
+            const loggedIn = localStorage.getItem('loggedIn');
+            const bicicletasLink = document.getElementById('bicicletas-btn');
+            const bicicletasAnchor = document.getElementById('bicicletas-link');
+
+            if (loggedIn === 'true') {
+                bicicletasLink.classList.remove('hidden');
+                bicicletasAnchor.href = 'bicicletas.html'; // Ativa o link
+            } else {
+                bicicletasLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    alert('Por favor, faça login para acessar as bicicletas.');
+                });
+            }
         }
+
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             const burger = document.querySelector('.burger');
             navLinks.classList.toggle('active');
             burger.classList.toggle('active');
         }
+
+        document.addEventListener('DOMContentLoaded', checkLogin);
     </script>
 </body>
 </html>

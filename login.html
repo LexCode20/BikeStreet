@@ -29,11 +29,22 @@
             const email = document.getElementById('email').value;
             const senha = document.getElementById('senha').value;
 
+            // Obter os valores armazenados no localStorage
             const storedEmail = localStorage.getItem('email');
             const storedSenha = localStorage.getItem('senha');
+            const registered = localStorage.getItem('registered');
+            
+            // Verificar se o usuário está registrado
+            if (!registered) {
+                alert('Por favor, faça o cadastro primeiro.');
+                window.location.href = 'cadastro.html'; // Redireciona para a página de cadastro
+                return;
+            }
 
+            // Verificar se os valores correspondem
             if (email === storedEmail && senha === storedSenha) {
                 alert('Login realizado com sucesso!');
+                localStorage.setItem('loggedIn', 'true'); // Marcar o usuário como logado
                 window.location.href = 'home.html';
             } else {
                 alert('Email ou senha incorretos.');
