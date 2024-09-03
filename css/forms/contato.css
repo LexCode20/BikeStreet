@@ -1,5 +1,4 @@
 /* Estilos existentes */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,7 +6,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to bottom, #333, #f4f4f4); 
+    background: linear-gradient(to bottom, #333, #f4f4f4);
     color: white;
 }
 
@@ -70,12 +69,28 @@ header {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
+.dia{
+    height: 40vh;
+    width: 80%;
+}
+
+
 .burger.active .line2 {
     opacity: 0;
 }
 
 .burger.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+#img{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+}
+#img img{
+    height: 100%;
+    width: 100%;
 }
 
 /* Responsivo */
@@ -105,81 +120,107 @@ header {
     }
 }
 
-
-
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
+/* Novos estilos */
+main {
+    max-width: 100%;
+    padding: 20px;
+    min-width: 320px; /* Define uma largura mínima */
 }
 
-/* Estilização da seção de serviços */
-.services {
+.intro {
+    text-align: center;
     padding: 40px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
+    background: #f9f9f9;
+    margin-bottom: 20px;
 }
 
-.services h2 {
-    margin-top: 60px;
-    font-size: 2.2em;
-    margin-bottom: 30px;
-    color: #333;
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.service-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
+.contact-info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact-item h3 {
+    margin-top: 0;
+}
+
+.map-container {
+    text-align: center;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.service-item h3 {
-    font-size: 1.5em;
-    color: #007bff;
-    margin-bottom: 15px;
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
-.service-item p {
-    font-size: 1em;
-    color: #555;
-}
-
-@media (min-width: 768px) {
-    .services {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 20px;
-    }
-
-    .service-item {
-        flex: 1;
-        margin-bottom: 0;
-    }
-}
-.rating {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.star {
-    font-size: 20px;
-    color: #ccc; /* Cor das estrelas não acesas */
-    transition: color 0.3s;
-}
-
-.star.filled {
-    color: #007bff; /* Cor das estrelas acesas */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }

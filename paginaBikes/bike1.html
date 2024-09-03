@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/forms/construcao.css">
+    <title>Bicicleta M5</title>
+    <link rel="stylesheet" href="/css/forms/bikes.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -12,14 +12,14 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="/home.html">
-                    <img src="img/imgSobre/img/logoNova.png" alt="Logo da BikeStreet">
+                    <img src="/img/logo.png" alt="Logo da BikeStreet">
                 </a>
             </div>
             <ul class="nav-links">
                 <li><a href="/login.html">Login</a></li>
                 <li><a href="/construcao.html" id="bicicletas-link">Bicicletas</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="/contato.html">Contato</a></li>
             </ul>
             <div class="burger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
                 <div class="line1"></div>
@@ -30,23 +30,30 @@
     </header>
 
     <main>
-        <h1>Página em construção <br> obrigado por esperar</h1>
+        <div class="Container">
+            <div><img src="/img/bicicletas/bike-GTS FEEL.webp"></div>
+            <div>
+                <h1>Nome da bike</h1>
+                <h1>R$: Preço</h1>
+                <p>Descrição da bike</p>
+                <a href="">Comprar</a>
+            </div>
+            
+        </div>
     </main>
+
 
     <footer>
         <p>&copy; 2024 BikeStreet. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-    
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             const burger = document.querySelector('.burger');
             navLinks.classList.toggle('active');
             burger.classList.toggle('active');
-        };
-
+        }
     </script>
-    
 </body>
 </html>

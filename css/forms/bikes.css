@@ -1,0 +1,139 @@
+/* Estilos existentes */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(to bottom, #333, #f4f4f4); 
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img {
+    max-width: 80px; /* Ajuste conforme o tamanho da logo */
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Transição das linhas do burger */
+.burger.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .line2 {
+    opacity: 0;
+}
+
+.burger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Alterado para min-height para evitar problemas de altura em telas menores */
+}
+
+.Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+    gap: 25vh; /* Espaçamento entre as colunas */
+    align-items: center; 
+}
+
+.Container img {
+    max-width: 100%;
+    height: auto; /* Garante que a imagem seja responsiva */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .Container {
+        grid-template-columns: 1fr; /* Uma coluna apenas */
+        grid-template-rows: auto; /* As linhas vão se ajustar automaticamente */
+        text-align: center; /* Centraliza o texto abaixo da imagem */
+    }
+
+    .Container img {
+        width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
+    }
+}
