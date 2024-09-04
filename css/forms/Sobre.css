@@ -1,64 +1,62 @@
-*{
+/* Estilos gerais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.interface{
+.interface {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 4%;
 }
 
-header{
+header {
     width: 100%;
     padding: 40px 0;
     position: fixed;
     top: 0;
     left: 0;
     transition: 0.5s;
-    z-index: 3333333;
-    
+    z-index: 9999;
 }
 
-header.rolagem{
-   background-color: #fff;
-   padding: 20px 4%;
-   box-shadow: 0 0 8px #00000061;
-    
+header.rolagem {
+    background-color: #fff;
+    padding: 20px 4%;
+    box-shadow: 0 0 8px #00000061;
 }
 
-header.rolagem .menu-desktop nav ul li a{
+header.rolagem .menu-desktop nav ul li a {
     color: #007bff;
 }
 
-header.rolagem .btn-contato a button{
+header.rolagem .btn-contato a button {
     color: #fff;
     background-color: #007bff;
 }
 
-header .interface .logo img{
+header .interface .logo img {
     max-width: 100px;
 }
 
-header .interface{
+header .interface {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
-header .menu-desktop nav ul{
+
+header .menu-desktop nav ul {
     list-style-type: none;
-
 }
 
-header .menu-desktop nav ul li{
+header .menu-desktop nav ul li {
     display: inline-block;
     margin: 0 40px;
 }
 
-header .menu-desktop nav ul li a{
+header .menu-desktop nav ul li a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -66,26 +64,26 @@ header .menu-desktop nav ul li a{
     transition: 0.2s;
 }
 
-header .menu-desktop nav a:hover{
+header .menu-desktop nav a:hover {
     transform: scale(1.05);
 }
 
-header .btn-contato button{
+header .btn-contato button {
     width: 140px;
     height: 50px;
     background-color: transparent;
     border: 2px solid #fff;
     border-radius: 10px;
     color: #fff;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-header .btn-contato button:hover{
+header .btn-contato button:hover {
     background-color: #007bff;
     cursor: pointer;
 }
 
-section.hero-site{
+section.hero-site {
     height: 98vh;
     background-image: url(/img/imgSobre/img/fundoHome.jpg);
     background-repeat: no-repeat;
@@ -94,89 +92,87 @@ section.hero-site{
     background-attachment: fixed;
     color: #fff;
 }
-.hero-site .interface{
+
+.hero-site .interface {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.hero-site .txt-hero h1{
+.hero-site .txt-hero h1 {
     font-size: 4em;
     line-height: 70px;
     font-weight: 200;
 }
 
-.hero-site .txt-hero h1 span{
+.hero-site .txt-hero h1 span {
     display: block;
     font-weight: 800;
 }
 
-.hero-site .txt-hero p{
+.hero-site .txt-hero p {
     font-size: 20px;
     font-weight: 300;
     margin: 20px 0;
 }
 
-.hero-site .txt-hero p span{
+.hero-site .txt-hero p span {
     display: block;
 }
 
-.hero-site button{
+.hero-site button {
     width: 220px;
     height: 60px;
     font-size: 20px;
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff;
-    transition: .3s;
+    transition: 0.3s;
 }
-.hero-site button:hover{
+
+.hero-site button:hover {
     background-color: #007bff;
     cursor: pointer;
 }
 
-
-/*estilo das vantagens*/
-section.vantagens{
+/* Estilo das vantagens */
+section.vantagens {
     padding: 80px 0;
-
 }
-.vantagens .itens-container{
+
+.vantagens .itens-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10%;
     margin-bottom: 60px;
-
-
 }
 
-.vantagens .itens-container .img-itens img{
+.vantagens .itens-container .img-itens img {
     max-width: 480px;
 }
 
-.vantagens .itens-container .txt-itens h3{
+.vantagens .itens-container .txt-itens h3 {
     font-size: 3em;
     line-height: 50px;
     margin-bottom: 20px;
     color: #007bff;
 }
 
-.itens-container .txt-itens h3 span{
-    color:#000;
+.itens-container .txt-itens h3 span {
+    color: #000;
     font-weight: 300;
 }
 
-/*Estilo do rodapé*/
-
-footer{
+/* Estilo do rodapé */
+footer {
     background-color: #353535;
     width: 100%;
     text-align: center;
     padding: 30px 0;
 }
 
-footer .top-footer button{
+footer .top-footer button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -188,26 +184,124 @@ footer .top-footer button{
     margin: 0 10px;
     transition: 0.4s;
 }
-footer .top-footer button:hover{
+
+footer .top-footer button:hover {
     background-color: #fff;
     color: #000;
 }
 
-footer .middle-footer{
+footer .middle-footer {
     margin: 20px 0;
 }
 
-footer .middle-footer a{
+footer .middle-footer a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
 }
 
-.bottom-footer{
+.bottom-footer {
     border-top: 2px solid #fff;
 }
 
-footer .bottom-footer p{
+footer .bottom-footer p {
     color: #fff;
     margin-top: 10px;
+}
+
+/* Consultas de mídia */
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    header .interface {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .menu-desktop nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .menu-desktop nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-site {
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .hero-site .txt-hero h1 {
+        font-size: 2.5em;
+        line-height: 50px;
+    }
+
+    .hero-site .txt-hero p {
+        font-size: 16px;
+    }
+
+    .hero-site button {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .vantagens .itens-container {
+        flex-direction: column;
+    }
+
+    .vantagens .itens-container .img-itens img {
+        max-width: 100%;
+    }
+
+    .vantagens .itens-container .txt-itens h3 {
+        font-size: 2em;
+    }
+
+    footer .top-footer button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    header .interface {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-desktop nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu-desktop nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-site .txt-hero h1 {
+        font-size: 3em;
+        line-height: 60px;
+    }
+
+    .hero-site .txt-hero p {
+        font-size: 18px;
+    }
+
+    .vantagens .itens-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .vantagens .itens-container .img-itens img {
+        max-width: 100%;
+    }
+
+    .vantagens .itens-container .txt-itens h3 {
+        font-size: 2.5em;
+    }
 }
