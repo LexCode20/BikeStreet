@@ -3,6 +3,7 @@ body {
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
+    background-image: url(/img/imgSobre/img/logoNova.png);
     align-items: center;
     height: 100vh;
     margin: 0;
